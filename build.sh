@@ -11,7 +11,7 @@ echo Bash shell configured!
 echo
 
 # Load scripts and settings...
-source build-settings.sh
+source ./build-scripts/build-settings.sh
 echo Build settings loaded!
 
 if [ ! -d $PACKAGES_PATH ]; then
