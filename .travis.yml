@@ -1,0 +1,4 @@
+before_install: chmod +x install-build-tools.sh
+install: ./install-build-tools.sh
+script: npm run create-release
+cache: packages
