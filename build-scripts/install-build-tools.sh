@@ -9,9 +9,14 @@ set -o pipefail
 echo
 echo Bash shell configured!
 echo
+script_name=$0
+script_full_path=$(dirname "$0")
+
+echo "script_name: $script_name"
+echo "full path: $script_full_path"
 
 # Load scripts and settings...
-source build-settings.sh
+source "$script_full_path/build-settings.sh"
 echo Build settings loaded!
 
 source $NODE_TOOLS_PATH
