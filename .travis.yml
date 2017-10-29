@@ -1,9 +1,9 @@
 before_install: chmod +x build.sh ./build-scripts/*.sh
 script: ./build.sh
-cache: packages
+cache: .packages
 deploy:
   provider: releases
-  api-key: "d328a1446ae2f8f06b8cd52810ee963dde3e4c1b"
+  api-key: "520bd4384ea390e4fab29e8fdc43df0c56de3038"
   file_glob: true
   file: .dist/*
   skip_cleanup: true
