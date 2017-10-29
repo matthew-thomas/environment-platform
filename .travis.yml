@@ -1,3 +1,11 @@
 before_install: chmod +x build.sh ./build-scripts/install-build-tools.sh
 script: ./build.sh
 cache: packages
+deploy:
+  provider: releases
+  api-key: "d328a1446ae2f8f06b8cd52810ee963dde3e4c1b"
+  file_glob: true
+  file: out/*
+  skip_cleanup: true
+  on:
+    tags: true
