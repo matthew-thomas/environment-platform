@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# The main purpose of this script is to decouple the
+# cli user from whatever build tool is currently being used.
+
 echo Starting Build!
 
 # Set some bash execution settings...
