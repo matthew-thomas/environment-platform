@@ -1,4 +1,4 @@
-before_install: chmod +x build.sh ./build-scripts/install-build-tools.sh
+before_install: chmod +x build.sh ./build-scripts/*.sh
 script: ./build.sh
 cache: packages
 deploy:
