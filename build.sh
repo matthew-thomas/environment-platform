@@ -6,6 +6,7 @@ echo Starting Build!
 set -o errexit
 set -o nounset
 set -o pipefail
+
 echo
 echo Bash shell configured!
 echo
@@ -24,3 +25,5 @@ source $NODE_TOOLS_PATH
 echo Script $NODE_TOOLS_PATH loaded!
 
 initialize_node 'v6.3.1' $PACKAGES_PATH
+
+./build-scripts/build.sh
