@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 # Static settings
-PACKAGES_FOLDER='packages'                                          # Defines the name of the folder where build dependencies should be cached.
+PACKAGES_FOLDER='.packages'                                         # Defines the name of the folder where build dependencies should be cached.
 RELEASE_OUTPUT_FOLDER='.dist'                                       # The name of the folder where a release for distribution is stored.
 
 # Calculated settings
