@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-echo Provisioning Node.js modules needed for building...
-$npm install
+echo Provisioning Node.js modules...
+npm install
 echo Done!
 echo
 mkdir -p $RELEASE_OUTPUT_PATH

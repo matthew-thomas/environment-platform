@@ -67,12 +67,8 @@ initialize_node() {
     NODE_DIST_URL=https://nodejs.org/dist/$NODE_VERSION/$NODE_INSTALL_FILE
     NODE_INSTALL_FILE_LOCAL_PATH="$PACKAGES_PATH/$NODE_INSTALL_FILE"
 
-    export node="$NODE_PACKAGE_PATH/node"
-    export npm="$NODE_PACKAGE_PATH/npm"
+    PATH=$NODE_PACKAGE_PATH:$PATH
 
-    echo
-    echo $node $($node --version)
-    echo $npm $($npm --version)
     echo
     echo Paths configured!
 }
