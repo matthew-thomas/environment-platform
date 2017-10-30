@@ -1,11 +1,12 @@
 before_install: chmod +x build.sh ./build-scripts/*.sh
-script: ./build.sh
-cache: .packages
+script: "./build.sh"
+cache: ".packages"
 deploy:
   provider: releases
-  api-key: "520bd4384ea390e4fab29e8fdc43df0c56de3038"
+  api_key:
+    secure: BPuiRzvzlysgmdAZj2I2vj36kXB4u7W0b8SUfKoYBcSP4BXIweCSupmyJAHWiYBHBagqGudrmhM00lT7hjLV8JNPKDTRNxLAHzddCTsS2OFWfY4/ehCedc3FNhraFbCWrMY9HcBCUPphn5pDnBVFGC5tIs65dm/Np6v1ODf3oEbI8Cy1swwdjtfaX+8fKo3qBDqOenVYDGT6ZWflwbSsNpO9LQhbWW6Bua7xdklODsICsZC/DCFisVK61lFWToWYH9qf+s9EIWJ/WeAK1pgy3040qtz1Cy04rMNa86Hlc02f+DHaGfEKAqX0f61s1HS7xomFySS2xy6rj/fEzC+iBm/aCCnvb9UdHg1972Eum28XJs7IHwYNIHdcaFwZz/KCAw2dBJj7F9zwdZTIBcXfWT5UXfQ7L0RfTtuTCvhIAJHsvxeTWY8qDOgBgvtkR3EKneBDWF4tjFRQLY/XPWLcmuDGZhe0wqNm/EJDNOf2ENt4CnnqmojIffCelOjtlOoVb6xt0u8OnL4KPJKOhOfT+NIWlCcHr/KEs6CDgtf8SoH9rLv3rO6CIoy+/DmEgnC69mKhmRRvNT2Mui4JGGSmANFWaPu4w1I2FuFQQw3T6LWxyDjlwKJBcdsLK0AVn2DQxCvn0DbUYsd94NFHbU/dX4G1TgZcvVVZOqKbUOeHs6I=
   file_glob: true
-  file: .dist/*
+  file: '.dist/*'
   skip_cleanup: true
   on:
     tags: true
