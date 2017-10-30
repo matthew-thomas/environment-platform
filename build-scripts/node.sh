@@ -13,7 +13,7 @@ provision_node() {
     echo Provisioning Node.js $NODE_VERSION...
     initialize_node $NODE_VERSION $PACKAGES_PATH
 
-    NODE_CURRENT_VERSION="$($node --version)" || true
+    NODE_CURRENT_VERSION="$(node --version)" || true
 
     if [ "$NODE_CURRENT_VERSION" != "$NODE_VERSION" ]; then
         echo Expected $NODE_VERSION
