@@ -1,6 +1,7 @@
 before_install: chmod +x build.sh ./build-scripts/*.sh
 script: "./build.sh"
-cache: ".packages"
+cache:
+  directories: ".packages"
 deploy:
   provider: releases
   api_key:
