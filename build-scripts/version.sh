@@ -19,7 +19,12 @@ get_app_version() {
 get_build_number() {
     # If the current build number isn't specified by an external agent (CI server),
     # then calculate it based on the previous build number.
-    BUILD_NUMBER="" # TODO: Integrate with CI server.
+    if [[ ! -v TRAVIS_BUILD_NUMBER ]]; then
+        BUILD_NUMBER=
+    else
+        BUILD_NUMBER=$TRAVIS_BUILD_NUMBER
+    fi    
+
     if [[ -z "$BUILD_NUMBER" ]]; then
         LAST_BUILD_NUMBER="$(ls -l $DISTRIBUTIONS_FOLDER | tail -1 | grep -Po '\d+$')"
 
