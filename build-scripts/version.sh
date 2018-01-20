@@ -22,8 +22,8 @@ get_build_number() {
     if [[ ! -v TRAVIS_BUILD_NUMBER ]]; then
         BUILD_NUMBER=
     else
-        BUILD_NUMBER=$TRAVIS_BUILD_NUMBER
-    fi    
+        BUILD_NUMBER=$TRAVIS_BUILD_NUMBER # TODO: Refactor to be a parameter.
+    fi
 
     if [[ -z "$BUILD_NUMBER" ]]; then
         LAST_BUILD_NUMBER="$(ls -l $DISTRIBUTIONS_FOLDER | tail -1 | grep -Po '\d+$')"

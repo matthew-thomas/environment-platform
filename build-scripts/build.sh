@@ -11,6 +11,6 @@ echo Done!
 
 echo
 mkdir -p $RELEASE_OUTPUT_PATH
-echo Release distribution folder \'$RELEASE_OUTPUT_PATH\' created/exists!
+echo Release distribution folder \'$RELEASE_OUTPUT_PATH\' created!
 
 echo "Hello, World!" > "$RELEASE_OUTPUT_PATH/hello-world.txt"
