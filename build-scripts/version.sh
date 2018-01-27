@@ -19,10 +19,12 @@ get_app_version() {
 get_build_number() {
     # If the current build number isn't specified by an external agent (CI server),
     # then calculate it based on the previous build number.
-    if [[ ! -v TRAVIS_BUILD_NUMBER ]]; then
-        BUILD_NUMBER=
-    else
-        BUILD_NUMBER=$TRAVIS_BUILD_NUMBER # TODO: Refactor to be a parameter.
+    if [[ ! -v BUILD_NUMBER ]]; then
+        if [[ ! -v TRAVIS_BUILD_NUMBER ]]; then
+            BUILD_NUMBER=
+        else
+            BUILD_NUMBER=$TRAVIS_BUILD_NUMBER # TODO: Refactor to be a parameter.
+        fi
     fi
 
     if [[ -z "$BUILD_NUMBER" ]]; then
