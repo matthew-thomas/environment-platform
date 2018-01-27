@@ -21,7 +21,12 @@ echo Build settings loaded!
 if [ ! -d $PACKAGES_PATH ]; then
     echo "Build dependencies $PACKAGES_PATH does not exist, running local setup..."
 
-    ./build-scripts/install-build-tools.sh
+    INSTALL_BUILD_TOOLS_PATH='./build-scripts/install-build-tools.sh'
+
+    chmod -R 755 $INSTALL_BUILD_TOOLS_PATH
+    echo Set execute permissions on $INSTALL_BUILD_TOOLS_PATH
+    
+    $INSTALL_BUILD_TOOLS_PATH
 fi
 
 source $NODE_TOOLS_PATH
