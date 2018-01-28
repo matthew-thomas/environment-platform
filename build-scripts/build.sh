@@ -26,7 +26,10 @@ echo
 mkdir -p $RELEASE_OUTPUT_PATH
 echo Release distribution folder \'$RELEASE_OUTPUT_PATH\' created!
 
+# Output the version number to the output path.
 echo $APP_VERSION > "$RELEASE_OUTPUT_PATH/version.txt"
+
+# Output the deployment scripts to the output path.
 cp $SOURCE_PATH/deployment/*.* $RELEASE_OUTPUT_PATH
 
 echo
