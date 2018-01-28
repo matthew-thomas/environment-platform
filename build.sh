@@ -33,4 +33,5 @@ echo Script $NODE_TOOLS_PATH loaded!
 
 initialize_node 'v6.3.1' $PACKAGES_PATH
 
+npm version 0.1.14
 npm run build:src
