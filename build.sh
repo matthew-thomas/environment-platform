@@ -15,17 +15,17 @@ echo Bash shell configured!
 echo
 
 # Load scripts and settings...
-source ./build-scripts/build-settings.sh
+BUILD_SCRIPTS_PATH='./build-scripts'
+source $BUILD_SCRIPTS_PATH/build-settings.sh
 echo Build settings loaded!
 
-BUILD_SCRIPTS_PATH='./build-scripts'
 chmod +x $BUILD_SCRIPTS_PATH/*.sh
 echo Set execute permissions on $BUILD_SCRIPTS_PATH
 
 if [ ! -d $PACKAGES_PATH ]; then
     echo "Build dependencies $PACKAGES_PATH does not exist, running local setup..."
 
-    ./build-scripts/install-build-tools.sh
+    $BUILD_SCRIPTS_PATH/install-build-tools.sh
 fi
 
 source $NODE_TOOLS_PATH
