@@ -26,7 +26,7 @@ echo
 mkdir -p $RELEASE_OUTPUT_PATH
 echo Release distribution folder \'$RELEASE_OUTPUT_PATH\' created!
 
-echo "Hello, World! $APP_VERSION" > "$RELEASE_OUTPUT_PATH/hello-world.txt"
+echo $APP_VERSION > "$RELEASE_OUTPUT_PATH/version.txt"
 cp $SOURCE_PATH/deployment/*.* $RELEASE_OUTPUT_PATH
 
 echo
