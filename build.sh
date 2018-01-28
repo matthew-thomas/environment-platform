@@ -34,3 +34,5 @@ echo Script $NODE_TOOLS_PATH loaded!
 initialize_node 'v6.3.1' $PACKAGES_PATH
 
 npm run build:src
+
+echo Build Complete
