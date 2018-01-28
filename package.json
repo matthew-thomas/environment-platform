@@ -14,6 +14,8 @@
     "build:dependencies:clean": "rm -fr ./node_modules && rm -fr ./packages",
     "build:output:clean": "rm -fr ./out",
     "build:src": "bash build-scripts/build.sh",
-    "create-release": "npm run build:output:clean && npm run build:src"
+    "create-release": "npm run build:output:clean && npm run build:src",
+    "pull":"git pull origin master",
+    "push":"npm run pull && npm run create-release && git push --tags"
   }
 }
