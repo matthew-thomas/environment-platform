@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-echo Deployment Completed!
+VERSION=`cat version.txt`
+echo Deployment of $VERSION Completed!
