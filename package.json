@@ -1,7 +1,7 @@
 {
   "name": "eplat.dependencies",
   "description": "Build script for the Environment Platform.",
-  "version": "0.1.18",
+  "version": "0.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "build:output:clean": "rm -fr ./out",
     "build:src": "bash build-scripts/build.sh",
     "create-release": "npm run build:output:clean && npm run build:src",
-    "pull":"git pull origin master",
-    "push":"npm run pull && npm run create-release && git push --tags"
+    "pull": "git pull origin master",
+    "push": "npm run pull && npm run create-release && git push --tags"
   }
 }
