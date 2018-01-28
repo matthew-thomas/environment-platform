@@ -1,7 +1,7 @@
 {
   "name": "eplat.dependencies",
   "description": "Build script for the Environment Platform.",
-  "version": "0.0.13",
+  "version": "0.1.14",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -9,11 +9,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "clean"                     : "npm run build:clean",
-    "build:clean"               : "npm run build:output:clean && npm run build:dependencies:clean || true",
-    "build:dependencies:clean"  : "rm -fr ./node_modules && rm -fr ./packages",
-    "build:output:clean"        : "rm -fr ./out",
-    "build:src"                 : "bash build-scripts/build.sh",
-    "create-release"            : "npm run build:output:clean && npm run build:src"
+    "clean": "npm run build:clean",
+    "build:clean": "npm run build:output:clean && npm run build:dependencies:clean || true",
+    "build:dependencies:clean": "rm -fr ./node_modules && rm -fr ./packages",
+    "build:output:clean": "rm -fr ./out",
+    "build:src": "bash build-scripts/build.sh",
+    "create-release": "npm run build:output:clean && npm run build:src"
   }
 }
