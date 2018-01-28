@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION=`cat version.txt`
+SCRIPT_PATH=$(dirname "$0")
+
+VERSION=`cat $SCRIPT_PATH/version.txt`
 echo Deployment of $VERSION Completed!
