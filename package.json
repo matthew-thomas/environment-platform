@@ -1,7 +1,7 @@
 {
   "name": "eplat.dependencies",
   "description": "Build script for the Environment Platform.",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "license": "MIT",
   "repository": {
     "type": "git",
