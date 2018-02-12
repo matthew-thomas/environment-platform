@@ -16,6 +16,10 @@ get_app_version() {
     echo "$APP_VERSION.$BUILD_NUMBER"
 }
 
+get_last_build_number() {
+    echo "$(ls -ld $DISTRIBUTIONS_FOLDER/*/ --sort=time | head -1 | grep -Po '\d+/' | grep -Po '\d+')"
+}
+
 get_build_number() {
     # If the current build number isn't specified by an external agent (CI server),
     # then calculate it based on the previous build number.
@@ -28,7 +32,7 @@ get_build_number() {
     fi
 
     if [[ -z "$BUILD_NUMBER" ]]; then
-        LAST_BUILD_NUMBER="$(ls -ld $DISTRIBUTIONS_FOLDER/*/ --sort=time | head -1 | grep -Po '\d+/' | grep -Po '\d+')"
+        LAST_BUILD_NUMBER="$(get_last_build_number)"
 
         if [[ -z "$LAST_BUILD_NUMBER" ]]; then
             # This is the first build.
