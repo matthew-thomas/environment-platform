@@ -28,7 +28,7 @@ get_build_number() {
     fi
 
     if [[ -z "$BUILD_NUMBER" ]]; then
-        LAST_BUILD_NUMBER="$(ls -l $DISTRIBUTIONS_FOLDER | tail -1 | grep -Po '\d+$')"
+        LAST_BUILD_NUMBER="$(ls -ld $DISTRIBUTIONS_FOLDER/*/ --sort=time | head -1 | grep -Po '\d+/' | grep -Po '\d+')"
 
         if [[ -z "$LAST_BUILD_NUMBER" ]]; then
             # This is the first build.
