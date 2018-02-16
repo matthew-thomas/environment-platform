@@ -18,10 +18,5 @@ fi
 
 SCRIPT_PATH=$(dirname "$0")
 VERSION=`cat $SCRIPT_PATH/version.txt`
-ENVIRONMENT_PLATFORM=azure
-
-echo Environment Platform: $ENVIRONMENT_PLATFORM
-
-$DEPLOY_SCRIPTS_PATH/$ENVIRONMENT_PLATFORM.sh
 
 echo Deployment of $VERSION Completed!
